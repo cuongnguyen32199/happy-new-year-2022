@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy New Year | 2022</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Happy new year 2022</h1>
+    <section>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script>
+      const tl = anime.timeline({
+        easing: 'easeOutExpo',
+        duration: 750,
+      });
+
+      tl.add({
+        targets: 'section div',
+        width: '100%',
+        backgroundColor: 'rgb(197, 197, 255)',
+        delay: anime.stagger(100),
+      });
+
+      tl.add({
+        targets: 'section div',
+        width: '90%',
+        backgroundColor: 'rgb(235, 235, 255)',
+      });
+
+      tl.add(
+        {
+          targets: 'h1',
+          top: '20%',
+          opacity: 1,
+          duration: 4000,
+        },
+        '-=1600'
+      );
+
+      const rotate = anime({
+        targets: 'section',
+        scaleX: 2,
+        scaleY: 2,
+        translateX: '40%',
+        rotate: '45deg',
+        duration: 5000,
+        autoplay: false,
+      });
+
+      setTimeout(() => rotate.play(), 5000);
+    </script>
+  </body>
+</html>
