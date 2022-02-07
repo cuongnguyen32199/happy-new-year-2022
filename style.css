@@ -15,8 +15,7 @@ body {
 section {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[10];
-      grid-template-columns: repeat(10, auto);
+  grid-template-columns: repeat(10, auto);
 }
 
 section div {
